@@ -9,7 +9,7 @@
    
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     
-    
+ 
     <link rel="stylesheet" href="styles.css">
 
     <!-- Font Awesome for Icons -->
@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<div id="header" class="bg-primary">
+<header id="header" class="bg-primary">
     <div class="container">
         <nav>
             <div class="book">
@@ -27,24 +27,26 @@
                 </div>
             </div>
             <ul id="sidemenu" class="list-group">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
+                <li><a href="#header" aria-label="Go to Home">Home</a></li>
+                <li><a href="#about" aria-label="Go to About Section">About</a></li>
+                <li><a href="#services" aria-label="Go to Services Section">Services</a></li>
+                <li><a href="#portfolio" aria-label="Go to Portfolio Section">Portfolio</a></li>
+                <li><a href="#contact" aria-label="Go to Contact Section">Contact</a></li>
+                <li><button class="close-menu" aria-label="Close menu" onclick="closemenu()"><i class="fas fa-times"></i></button></li>
             </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
+            <button class="menu-toggle" aria-label="Open menu" onclick="openmenu()">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
         <div class="header-text">
             <p>Software Engineer</p>
             <h1>Hi, I'm <span>Jasmine</span> from Utah</h1>
         </div>
     </div>
-</div>
+</header>
 
 <!-- About Section -->
-<div id="about">
+<section id="about">
     <div class="container">
         <div class="row">
             <div class="col-md-6 about-col-1">
@@ -78,10 +80,10 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Services Section -->
-<div id="services">
+<section id="services">
     <div class="container">
         <h1 class="sub-title">My Services</h1>
         <div class="services-list row">
@@ -105,44 +107,44 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Portfolio Section -->
-<div id="portfolio">
+<section id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list row">
             <div class="col-md-4 work">
-                <img src="personal-portfolio-img/images/work-1.png" class="img-fluid">
+                <img src="personal-portfolio-img/images/work-1.png" class="img-fluid" alt="Social Media App">
                 <div class="layer">
                     <h3>Social Media App</h3>
                     <p>Project under development. More info coming soon.</p>
-                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                    <a href="#" aria-label="See Social Media App details"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             <div class="col-md-4 work">
-                <img src="personal-portfolio-img/images/work-2.png" class="img-fluid">
+                <img src="personal-portfolio-img/images/work-2.png" class="img-fluid" alt="Music App">
                 <div class="layer">
                     <h3>Music App</h3>
                     <p>Project under development. More info coming soon.</p>
-                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                    <a href="#" aria-label="See Music App details"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             <div class="col-md-4 work">
-                <img src="personal-portfolio-img/images/work-3.png" class="img-fluid">
+                <img src="personal-portfolio-img/images/work-3.png" class="img-fluid" alt="Online Shopping App">
                 <div class="layer">
                     <h3>Online Shopping App</h3>
                     <p>Project under development. More info coming soon.</p>
-                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                    <a href="#" aria-label="See Online Shopping App details"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
         </div>
         <a href="#" class="btn btn-primary">See More</a>
     </div>
-</div>
+</section>
 
 <!-- Contact Section -->
-<div id="contact">
+<section id="contact">
     <div class="container">
         <div class="row">
             <div class="col-md-6 contact-left">
@@ -150,25 +152,25 @@
                 <p><i class="fa-solid fa-paper-plane"></i> Zidtv1209@gmail.com</p>
                 <p><i class="fa-solid fa-square-phone"></i> (678) 812-9662</p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=100009615038621"><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/jasmine-thatcher-180ba633b/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100009615038621" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="" aria-label="Twitter"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jasmine-thatcher-180ba633b/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <a href="/personal-portfolio-img/images/my-cv.pdf" download class="btn btn-secondary">Download CV</a>
             </div>
             <div class="col-md-6 contact-right">
                 <form name="submit-to-google-sheet">
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your Name">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+                    <textarea id="message" name="message" rows="6" placeholder="Your Message" required aria-label="Your Message"></textarea>
                     <button type="submit" class="btn btn-secondary">Submit</button>
                 </form>
                 <span id="msg"></span>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 <?php get_footer(); ?>
@@ -181,3 +183,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
